@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: quarkus-component-e2e-painjsgwpm
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-code-with-quarkus-tmhk
+    app.kubernetes.io/part-of: pet-clinic-e2e-ynljbravtp
+  name: quarkus-component-e2e-painjsgwpm
+  namespace: has-e2e-rwxp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: quarkus-component-e2e-painjsgwpm
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: quarkus-component-e2e-painjsgwpm
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload:has-e2e-rwxp-quarkus-component-e2e-painjsgwpm
+        imagePullPolicy: Always
+        name: container-image
+        resources: {}
+status: {}
