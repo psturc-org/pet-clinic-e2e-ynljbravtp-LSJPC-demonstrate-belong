@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    appstudio.openshift.io/application: pet-clinic-e2e-ynljbravtp
+    appstudio.openshift.io/component: quarkus-component-e2e-lwyyarbgsu
+    build.appstudio.openshift.io/build: "true"
+    build.appstudio.openshift.io/type: build
+    build.appstudio.openshift.io/version: "0.1"
+    pipelines.appstudio.openshift.io/type: build
+  creationTimestamp: null
+  name: elquarkus-component-e2e-lwyyarbgsu
+  namespace: has-e2e-rwxp
+spec:
+  path: /
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: el-quarkus-component-e2e-lwyyarbgsu
+    weight: null
+status: {}
